@@ -27,7 +27,9 @@
   (check-equal? (test-simple-path-default) "/tmp")
   (check-equal? (test-simple-default-path) "/tmp")
   (check-equal? (test-simple-path-default-update) "/tmp")
-  (check-equal? (test-simple-update-default-path) '("/private/foo" "/private/bar"))
+  (check-equal? (test-simple-update-default-path)
+                (list (path->string (simplify-path "/tmp/../foo"))
+                      (path->string (simplify-path "/tmp/bar/../../bar"))))
 
 
   ;; In this config, the required parameters should all throw not-found exceptions
