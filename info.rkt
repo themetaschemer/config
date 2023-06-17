@@ -1,0 +1,10 @@
+#lang info
+(define collection "config")
+(define deps '(["base" #:version "8.2"] "rackunit-lib"))
+(define pkg-desc "A package for requiring and reading configuration parameters from config files")
+(define version "0.1")
+(define compile-omit-paths (list #rx"test\\\\" #rx"test/"))
+(define test-omit-paths (list #rx"test\\\\" #rx"test/"))
+(define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
+(define scribblings '(("scribblings/config.scrbl" ())))
+(define pkg-authors '("Anurag Mendhekar"))
