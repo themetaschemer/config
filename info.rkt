@@ -8,3 +8,4 @@
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/config.scrbl" ())))
 (define pkg-authors '("Anurag Mendhekar"))
+(define license 'MIT)
